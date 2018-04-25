@@ -4,8 +4,6 @@ import './App.css'
 class App extends Component {
   render () {
     const opts = {
-      height: '390',
-      width: '640',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 0
       }
@@ -14,13 +12,13 @@ class App extends Component {
     return (
       <div className='App'>
         <h1 className='heading'>Awesome Demo</h1>
-        <div >
+        <div  id='player-wrapper'>
           <YouTube
             className='player'
+            id='player'
             videoId='EyvA65wimJs'
             opts={opts}
             onReady={this._onReady}
-
           />
         </div>
       </div>
@@ -28,7 +26,7 @@ class App extends Component {
     )
   }
   _onReady (event) {
-    
+
   }
 }
 
